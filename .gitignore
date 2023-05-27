@@ -1,0 +1,5 @@
+# Ignore build dir
+./Build
+/Build
+./Projects
+/Projects
