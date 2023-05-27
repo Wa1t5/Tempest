@@ -41,12 +41,18 @@ add_library("Tempest" STATIC
             "${PROJECT_SOURCE_DIR}/Src/Window.cpp"
             "${PROJECT_SOURCE_DIR}/Include/Tempest/FileSystem.hpp"
             "${PROJECT_SOURCE_DIR}/Src/FileSystem.cpp"
+            "${PROJECT_SOURCE_DIR}/Include/Tempest/Entity.hpp"
+            "${PROJECT_SOURCE_DIR}/Src/Entity.cpp"
+            "${PROJECT_SOURCE_DIR}/Include/Tempest/EntityManager.hpp"
+            "${PROJECT_SOURCE_DIR}/Src/EntityManager.cpp"
+            "${PROJECT_SOURCE_DIR}/Include/Tempest/Scene.hpp"
+            "${PROJECT_SOURCE_DIR}/Src/Scene.cpp"
+            "${PROJECT_SOURCE_DIR}/Include/Tempest/SceneManager.hpp"
+            "${PROJECT_SOURCE_DIR}/Src/SceneManager.cpp"
             )
 
 # Link the framework to the testing project
 link_libraries("${PROJECT_SOURCE_DIR}/Build/Tempest.lib")
 
 ############ Hiems Ventus
-project("HiemsVentus")
-add_executable("HiemsVentus" "Projects/Hiems Ventus/Src/Main.cpp")
-
+add_subdirectory("${PROJECT_SOURCE_DIR}/Projects/Hiems Ventus")

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <filesystem>
 #include <random>
+#include <vector>
 
 // Deps
 #include <SDL3/SDL.h>
@@ -21,6 +22,12 @@
 #include <Tempest/Input.hpp>
 #include <Tempest/ResourceLoader.hpp>
 #include <Tempest/Polygons.hpp>
+
+// Entitys scenes
+#include <Tempest/Entity.hpp>
+#include <Tempest/EntityManager.hpp>
+#include <Tempest/Scene.hpp>
+#include <Tempest/SceneManager.hpp>
 
 // Framework physics stuff
 #include "Physics.hpp"
