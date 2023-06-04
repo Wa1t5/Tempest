@@ -1,14 +1,12 @@
 #pragma once
 #include <Tempest/Game.hpp>
 
-class Entity
-{
+class Entity {
 public:
     Entity();
-    virtual void Init();
+    ~Entity();
     virtual void Update();
     virtual void Render();
-
-    int id;
-    Vector2* pos;
+    
+    int64_t _id = 0;
 };

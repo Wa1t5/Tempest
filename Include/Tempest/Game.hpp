@@ -5,6 +5,8 @@
 #include <filesystem>
 #include <random>
 #include <vector>
+#include <list>
+#include <typeinfo>
 
 // Deps
 #include <SDL3/SDL.h>
@@ -29,20 +31,15 @@
 #include <Tempest/Scene.hpp>
 #include <Tempest/SceneManager.hpp>
 
-// Framework physics stuff
-#include "Physics.hpp"
-
-class Game
-{
+class Game {
 public:
 
     Game(std::string _title = "Tempest", std::string _workingDir = "", int _width = 1280, int _height = 720);
 
-    void Init();
-    void LoadResources();
+    virtual void Init();
     void EventHadling();
-    void Update();
-    void Render();
+    virtual void Update();
+    virtual void Render();
 
     // Todo
     void SetFPS(int fps);
@@ -51,7 +48,7 @@ public:
 
     inline static bool shouldQuit = false;
     inline static enum GameStates {RUNNING, PAUSED};
-    inline static int GameState = RUNNING;
+    inline static GameStates GameState = GameStates::RUNNING;
     inline static Window* mainWindow = nullptr;
     inline static Renderer* mainRenderer = nullptr;
     inline static Input* mainInput = nullptr;

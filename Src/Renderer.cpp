@@ -17,8 +17,7 @@ void Renderer::SetRenderColor(int r, int g, int b, int a)
     SDL_SetRenderDrawColor(_renderer, r, g, b, a);
 }
 
-Vector2* Renderer::GetDisplaySize()
-{
+Vector2* Renderer::GetDisplaySize() {
     // Get display mpde
     const SDL_DisplayMode* _dm = SDL_GetDesktopDisplayMode(SDL_GetDisplayForWindow(Game::mainWindow->_window));
     
@@ -26,7 +25,6 @@ Vector2* Renderer::GetDisplaySize()
     return new Vector2(_dm->w, _dm->h);
 }
 
-void Renderer::ChangeBuffer()
-{
+void Renderer::ChangeBuffer() {
     SDL_RenderPresent(Renderer::_renderer);
 }

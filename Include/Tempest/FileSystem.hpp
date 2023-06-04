@@ -1,8 +1,7 @@
 #pragma once
 #include <Tempest/Game.hpp>
 
-class FileSystem 
-{
+class FileSystem {
 public:
     FileSystem(std::string _gameDir = std::filesystem::current_path().string());
     std::string GetFile(std::string _filePath);

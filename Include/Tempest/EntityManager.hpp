@@ -1,20 +1,18 @@
 #pragma once
 #include <Tempest/Game.hpp>
 
-class EntityManager : public Entity
-{
+class EntityManager : public Entity {
 public:
-    void SpawnEntity(Entity* _entity, Vector2* _pos);
+    void SpawnEntity(Entity* _entity);
+    Entity* GetEntityByID(int64_t _entityID);
     void DestroyEntity(Entity* _entity);
     void EntityExists(Entity* _entity);
-    void ReorganizeEntities();
+    std::list<Entity*> ListEntities();
     void InitEntities();
     void LoadEntitiesResources();
     void UpdateEntities();
     void RenderEntities();
 
 private:
-    /* Entity Manager: Info */
-    int _entities_c = 0;
-    std::vector<Entity*> _entities;
+    std::list<Entity*> _entities;
 };

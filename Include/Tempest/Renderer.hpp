@@ -1,8 +1,7 @@
 #pragma once
 #include <Tempest/Game.hpp>
 
-class Renderer
-{
+class Renderer {
 public:
     Renderer(Window* _window);
     void Clear();

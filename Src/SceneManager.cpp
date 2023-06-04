@@ -1,29 +1,18 @@
 #include <Tempest/Game.hpp>
 
-void SceneManager::LoadScene(Scene* _scene)
-{
+void SceneManager::LoadScene(Scene* _scene) {
     _currentScene = _scene;
-
     SceneManager::InitScene();
-    SceneManager::LoadSceneResources();
 }
 
-void SceneManager::InitScene()
-{
+void SceneManager::InitScene() {
     _currentScene->Init();
 }
 
-void SceneManager::LoadSceneResources()
-{
-    _currentScene->LoadResources();
-}
-
-void SceneManager::UpdateScene()
-{
+void SceneManager::UpdateScene() {
     _currentScene->Update();
 }
 
-void SceneManager::RenderScene()
-{
+void SceneManager::RenderScene() {
     _currentScene->Render();
 }

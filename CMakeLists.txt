@@ -25,8 +25,6 @@ add_library("Tempest" STATIC
             "${PROJECT_SOURCE_DIR}/Src/Game.cpp"
             "${PROJECT_SOURCE_DIR}/Include/Tempest/Input.hpp"
             "${PROJECT_SOURCE_DIR}/Src/Input.cpp"
-            "${PROJECT_SOURCE_DIR}/Include/Tempest/Physics.hpp"
-            "${PROJECT_SOURCE_DIR}/Src/Physics.cpp"
             "${PROJECT_SOURCE_DIR}/Include/Tempest/Polygons.hpp"
             "${PROJECT_SOURCE_DIR}/Src/Polygons.cpp"
             "${PROJECT_SOURCE_DIR}/Include/Tempest/Renderer.hpp"
@@ -53,6 +51,3 @@ add_library("Tempest" STATIC
 
 # Link the framework to the testing project
 link_libraries("${PROJECT_SOURCE_DIR}/Build/Tempest.lib")
-
-############ Hiems Ventus
-add_subdirectory("${PROJECT_SOURCE_DIR}/Projects/Hiems Ventus")

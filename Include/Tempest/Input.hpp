@@ -1,8 +1,7 @@
 #pragma once
 #include <Tempest/Game.hpp>
 
-class Input
-{
+class Input {
 public:
 
     void _HandleMouse();

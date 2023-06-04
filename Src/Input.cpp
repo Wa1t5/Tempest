@@ -1,18 +1,15 @@
 #include <Tempest/Game.hpp>
 
-void Input::_HandleMouse()
-{
+void Input::_HandleMouse() {
     mouseButton = SDL_GetMouseState(&mouseX, &mouseY);
 }
 
-bool Input::IsMouseButtonDown(Uint32 _button)
-{
+bool Input::IsMouseButtonDown(Uint32 _button) {
     if (mouseButton == _button) return true;
     return false;
 }
 
-bool Input::IsKeyDown(SDL_Scancode _key)
-{
+bool Input::IsKeyDown(SDL_Scancode _key) {
     return SDL_GetKeyboardState(NULL)[_key];
 }
 

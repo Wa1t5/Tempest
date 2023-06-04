@@ -1,8 +1,7 @@
 #pragma once
 #include <Tempest/Game.hpp>
 
-class Sprite
-{
+class Sprite {
 public: 
     Sprite(std::string _path);
 
